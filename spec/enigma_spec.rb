@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 require 'date'
 require './lib/enigma'
 
@@ -17,7 +19,12 @@ require './lib/enigma'
  		expect(@enigma).to be_a Enigma
  	end
 
- 	it 'has attributes' do
+  it 'returns a random key' do
+      expect(@enigma.random_key.length).to eq(5)
+      expect(@enigma.random_key.to_i > 0).to eq(true)
+    end
+
+ 	xit 'has attributes' do
  		expect(@enigma.attribute).to eq (attribute)
  	end
- end
+end
