@@ -4,15 +4,14 @@ class Enigma
 
   attr_reader :message,
               :key,
-              :date
-
+              :date,
 
 
   def encrypt(message, key = random_key, date = default_date)
     @message = message.downcase
     @key     = key
     @date    = date
-    shift = shift(@key, @date)
+    #@shift = shift(@key, @date)
   end
 
   def random_key # creates a random 5 digit integer as a string. Ex: 00435, 59174
