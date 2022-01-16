@@ -24,6 +24,11 @@ require './lib/enigma'
       expect(@enigma.random_key.to_i > 0).to eq(true)
     end
 
+  it 'returns todays date' do
+    expect(@enigma.todays_date.length).to eq(6)
+    expect(@enigma.todays_date.to_i > 0).to eq(true)
+  end
+
  	xit 'has attributes' do
  		expect(@enigma.attribute).to eq (attribute)
  	end
