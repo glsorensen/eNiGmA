@@ -11,6 +11,8 @@ require './lib/encryptable'
     @message = "hello world"
     @key =      "02715"
     @date = "040895"
+
+    @offset_value = "1025"
   end
 
  	it 'exists' do
