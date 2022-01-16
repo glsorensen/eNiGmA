@@ -28,17 +28,6 @@ require './lib/encryptable'
     expect(@enigma.todays_date.to_i > 0).to eq(true)
   end
 
-  describe 'Encryptable module' do
-    include Encryptable
-    context 'tests for Encryptable module' do
-      it 'genrates a character set' do
-        expected = (("a".."z").to_a << " ")
-
-        expect(valid_chars).to eq(expected)
-      end
-    end
-  end
-
   describe '#encrypt' do
     xit 'returns a hash with cipher text, key, and date' do
       expected = {
