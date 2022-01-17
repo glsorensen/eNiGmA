@@ -21,7 +21,10 @@ require './lib/defaultable'
 
   it 'returns todays date' do
 
+    expected = Date.today.strftime('%d%m%y')
+
     expect(todays_date.length).to eq(6)
     expect(todays_date.to_i > 0).to eq(true)
+    expect(todays_date).to eq(expected)
   end
 end

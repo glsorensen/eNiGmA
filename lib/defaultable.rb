@@ -8,6 +8,7 @@ module Defaultable
 
   def todays_date # generates todays date as a string DDMMYY
    Date.today.strftime('%d%m%y')
+   # require 'pry'; binding.pry
  end
 
  def valid_characters
