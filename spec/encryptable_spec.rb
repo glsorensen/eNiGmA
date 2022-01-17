@@ -11,7 +11,7 @@ RSpec.describe Encryptable do
   include Defaultable
   include Shiftable
   before(:each) do
-    @message = "he$llo w8*orld"
+    @message = "hello world"
     @key =      "02715"
     @date = "040895"
 
