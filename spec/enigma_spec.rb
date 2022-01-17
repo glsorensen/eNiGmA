@@ -13,6 +13,7 @@ require './lib/shiftable'
     @message = "hello world"
     @key =      "02715"
     @date = "040895"
+    @encrypted_message = "keder ohulw"
 
     @offset_value = "1025"
   end
@@ -34,13 +35,13 @@ require './lib/shiftable'
   end
 
   describe '#decrypt' do
-    xit 'returns a hash with plain text, key, and date' do
+    it 'returns a hash with plain text, key, and date' do
       expected = {
-        decryption: "hello world! im bob",
+        decryption: "hello world",
         key: "02715",
         date: "040895"
       }
-      expect(@enigma.decrypt("keder ohulw!tlmsvrb", "02715", "040895")).to eq(expected)
+      expect(@enigma.decrypt(@encrypted_message, @key, @date)).to eq(expected)
     end
   end
 end

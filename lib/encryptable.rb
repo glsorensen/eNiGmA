@@ -21,7 +21,7 @@ module Encryptable
         shift.rotate! #permanantly rotate the given shift one poistion for the next iteration
       end
     end
-    encrypted_message
+    encrypted_message #returns the encrypted_message
   end
 
   def decypher(message, un_shift)
@@ -37,10 +37,9 @@ module Encryptable
             #rotates the set_the_wheel array buy the negative shift
             #takes the character in position [0]
             #adds letter to the decrytpted_message string
-        require 'pry'; binding.pry
         un_shift.rotate! #permanantly rotate the given shift one poistion for the next iteration
       end
     end
-    decrypted_message
+    decrypted_message #returns the decrypted_message
   end
 end
