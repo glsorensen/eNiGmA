@@ -5,14 +5,6 @@ require './lib/defaultable'
 
  RSpec.describe Defaultable do
    include Defaultable
-   before(:each) do
-     @message = "hello world"
-     @key =      "02715"
-     @date = "040895"
-
-     @offset =  "1025"
-
-   end
 
    it 'genrates a character set' do
     expected = (("a".."z").to_a << " ")
