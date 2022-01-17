@@ -6,3 +6,7 @@ message_file.close
 
 encrypting = Enigma.new
 encryption = encrypting.encrypt(message)
+
+encrypt_file = File.open(ARGV[1], "w")
+encrypt_file.write(encryption[:encryption])
+encrypt_file.close
