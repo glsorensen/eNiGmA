@@ -2,18 +2,18 @@ require 'simplecov'
 SimpleCov.start
 require 'date'
 require './lib/enigma'
+require './lib/encryptable'
+
 
  RSpec.describe Enigma do
  	before(:each) do
- 		@enigma = Enigma.new#("hello world", "02715", "040895")
-
+ 		@enigma = Enigma.new
     @message = "hello world"
     @key =      "02715"
     @date = "040895"
 
-
-
- 	end
+    @offset_value = "1025"
+  end
 
  	it 'exists' do
  		expect(@enigma).to be_a Enigma
@@ -21,9 +21,9 @@ require './lib/enigma'
 
 
   it 'returns a random key' do
-      expect(@enigma.random_key.length).to eq(5)
-      expect(@enigma.random_key.to_i > 0).to eq(true)
-    end
+    expect(@enigma.random_key.length).to eq(5)
+    expect(@enigma.random_key.to_i > 0).to eq(true)
+  end
 
   it 'returns todays date' do
     expect(@enigma.todays_date.length).to eq(6)
@@ -51,5 +51,4 @@ require './lib/enigma'
       expect(@enigma.decrypt("keder ohulw!tlmsvrb", "02715", "040895")).to eq(expected)
     end
   end
-
 end
