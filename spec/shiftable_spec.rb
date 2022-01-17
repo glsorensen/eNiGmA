@@ -16,6 +16,7 @@ require './lib/shiftable'
    end
 
   it 'can calculate an #offset_value' do
+    expected = 1672401025
 
     expect(offset_value(@date)).to eq("1025")
   end
