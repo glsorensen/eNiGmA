@@ -25,6 +25,6 @@ RSpec.describe Encryptable do
   end
 
   it '#decypher shifts a string using given shifts' do
-    expect(decypher(@message, @shift)).to eq @message
+    expect(decypher(@encrypt_message, @shift)).to eq @message
   end
 end
