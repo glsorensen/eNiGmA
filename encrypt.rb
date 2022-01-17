@@ -10,3 +10,5 @@ encryption = encrypting.encrypt(message)
 encrypt_file = File.open(ARGV[1], "w")
 encrypt_file.write(encryption[:encryption])
 encrypt_file.close
+
+puts "Created '#{ARGV[1]}' with the key #{encryption[:key]} and date #{encryption[:date]}"
