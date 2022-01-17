@@ -1,6 +1,8 @@
 require 'date'
+require './lib/defaultable'
 
 module Shiftable
+  include Defaultable
 
   def offset_value(date)
     date_squared = date.to_i ** 2
