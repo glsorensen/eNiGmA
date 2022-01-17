@@ -1,10 +1,6 @@
 require 'date'
 
-module Encryptable
-
-  def valid_characters
-    ("a".."z").to_a << " "
-  end
+module Shiftable
 
   def offset_value(date)
     date_squared = date.to_i ** 2
