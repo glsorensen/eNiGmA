@@ -32,8 +32,8 @@ require './lib/encryptable'
 
 
 
-  it 'returns an array of the shifts from given key and date' do
+  it 'make shift callable with key and date' do
 
-    expect(calculate_shift(@key, @offset)).to eq([3, 27, 73, 20])
+    expect(shift(@key, @date)).to eq([3, 27, 73, 20])
   end
 end

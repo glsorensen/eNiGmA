@@ -14,12 +14,12 @@ module Encryptable
   def the_shift(offset, key)
     shift_values = []
     offset.each_char.with_index do |char, index|
-      shift_values.push(char.to_i + key.slice(index..index+1).to_i)
+      shift_values << (char.to_i + key.slice(index..index+1).to_i)
     end
     shift_values
   end
 
-  def shift(key, date)
+  def shift(key, date) #makes methods usable with the encrypt shift call in Enigma.rb
     offset = offset_value(date)
     shift = the_shift(offset, key)
   end
