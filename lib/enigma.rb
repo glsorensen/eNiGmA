@@ -21,4 +21,12 @@ class Enigma
     shift = shift(@key, @date)
     @encrypted = {encryption: cypher(@message, shift), key: @key, date: @date}
   end
+
+  def decrypt(message, key = @encrypted[:key], date = @encrypted[:date])
+    @message = message.downcase
+    @key     = key
+    @date    = date
+    shift = shift(@key, @date)
+    @decrypted = {decryption: decypher(@message, shift), key: @key, date: @date}
+  end
 end
