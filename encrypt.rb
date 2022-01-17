@@ -5,7 +5,7 @@ message = message_file.read
 message_file.close
 
 encrypting = Enigma.new
-encryption = encrypting.encrypt(message)
+encryption = encrypting.encrypt(message, ARGV[2], date = ARGV[3] ||= Date.today.strftime("%d%m%y"))
 
 encrypt_file = File.open(ARGV[1], "w")
 encrypt_file.write(encryption[:encryption])
