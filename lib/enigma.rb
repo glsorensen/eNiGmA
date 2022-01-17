@@ -3,6 +3,7 @@ require 'date'
 class Enigma
   include Shiftable
   include Defaultable
+  include Encryptable
 
   attr_reader :message,
               :key,
