@@ -7,7 +7,7 @@ class Enigma
               :date,
 
 
-  def encrypt(message, key = random_key, date = default_date)
+  def encrypt(message, key = random_key, date = todays_date)
     @message = message.downcase
     @key     = key
     @date    = date

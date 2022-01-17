@@ -27,10 +27,10 @@ require './lib/encryptable'
 
   it 'can #find_keys from given key to use in #shift' do
 
-    expect(find_keys(@key)).to eq [2, 27, 71, 15]
+    expect(the_shift(@offset, @key)).to eq [3, 27, 73, 20]
   end
 
-  it 'can #find_keys_for_date from the given date to use in #shift' do
+  xit 'can #find_keys_for_date from the given date to use in #shift' do
 
 
     expect(find_keys_for_date(@offset)).to eq [1, 0, 2, 5]
