@@ -2,9 +2,10 @@ require 'simplecov'
 SimpleCov.start
 require 'date'
 require './lib/encryptable'
+require './lib/shiftable'
 
- RSpec.describe Encryptable do
-   include Encryptable
+ RSpec.describe Shiftable do
+   include Shiftable
    before(:each) do
      @message = "hello world"
      @key =      "02715"
@@ -13,12 +14,6 @@ require './lib/encryptable'
      @offset =  "1025"
 
    end
-
-   it 'genrates a character set' do
-    expected = (("a".."z").to_a << " ")
-
-    expect(valid_characters).to eq(expected)
-  end
 
   it 'can calculate an #offset_value' do
 
